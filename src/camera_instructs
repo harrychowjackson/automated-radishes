@@ -1,0 +1,13 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo raspi-config
+ * <select> Interfacing Options
+ * <select> P1 Camera
+ * Enable = Yes
+ * Use Esc to go back/exit
+ * Reboot
+sudo apt-get install python-picamera python3-picamera python-rpi.gpio
+
+
+INSTALLED!  Now use with python's picamera
+

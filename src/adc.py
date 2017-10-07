@@ -22,5 +22,4 @@ class Taris_ADC():
         return self.adc
 
     def readADC(self,adc_pin_address, adc_gain):
-    	
-return self.adc.read_adc(adc_pin_address, adc_gain)
+    	return self.adc.read_adc(adc_pin_address, adc_gain)

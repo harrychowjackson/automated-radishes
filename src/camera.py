@@ -1,9 +1,17 @@
+"""
+webcam.py - Webcam API for the FUTURE.
+  modified : 1/26/2020
+   ) 0 o .
+"""
+
 import time
 import picamera
 import os
 import io
 import sys
+import cv2
 from datetime import datetime
+
 
 class Webcam(object):
     def __init__(self):

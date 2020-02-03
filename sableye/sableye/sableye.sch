@@ -1,0 +1,186 @@
+EESchema Schematic File Version 4
+LIBS:sableye-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L sableye-rescue:RaspberryPi3_ModB-RESCUE-sableye U1
+U 1 1 59B1EDFB
+P 2800 3600
+F 0 "U1" H 3650 1500 60  0000 C CNN
+F 1 "RaspberryPi3_ModB" H 3300 1400 60  0000 C CNN
+F 2 "Connectors:IDC_Header_Straight_40pins" H 2800 4800 60  0001 C CNN
+F 3 "" H 2800 4800 60  0001 C CNN
+	1    2800 3600
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 4350 1650 1100 1450
+U 59B1F6CA
+F0 "Sensor_Interface" 60
+F1 "sensors.sch" 60
+F2 "VDD" U L 4350 1750 60 
+F3 "ADDR" I L 4350 1950 60 
+F4 "ALERT" O L 4350 2200 60 
+F5 "AIN0" I L 4350 2400 60 
+F6 "AIN1" I L 4350 2500 60 
+F7 "AIN2" I L 4350 2600 60 
+F8 "AIN3" I L 4350 2700 60 
+F9 "SDA" B L 4350 2900 60 
+F10 "SCLK" I L 4350 3000 60 
+$EndSheet
+$Comp
+L power:+5V #PWR01
+U 1 1 59B1FB01
+P 3150 1300
+F 0 "#PWR01" H 3150 1150 50  0001 C CNN
+F 1 "+5V" H 3150 1440 50  0000 C CNN
+F 2 "" H 3150 1300 50  0000 C CNN
+F 3 "" H 3150 1300 50  0000 C CNN
+	1    3150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 59B1FC65
+P 4200 1700
+F 0 "#PWR02" H 4200 1550 50  0001 C CNN
+F 1 "+5V" H 4200 1840 50  0000 C CNN
+F 2 "" H 4200 1700 50  0000 C CNN
+F 3 "" H 4200 1700 50  0000 C CNN
+	1    4200 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L sableye-rescue:+3.3V #PWR03
+U 1 1 59B27B65
+P 2450 1300
+F 0 "#PWR03" H 2450 1150 50  0001 C CNN
+F 1 "+3.3V" H 2450 1440 50  0000 C CNN
+F 2 "" H 2450 1300 50  0000 C CNN
+F 3 "" H 2450 1300 50  0000 C CNN
+	1    2450 1300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4350 2700
+NoConn ~ 4350 2600
+NoConn ~ 4350 2500
+NoConn ~ 4350 2400
+$Sheet
+S 4350 4300 1100 900 
+U 59B326C6
+F0 "Motors" 60
+F1 "motors.sch" 60
+F2 "PUMP_IN" U L 4350 4500 60 
+$EndSheet
+$Comp
+L power:GND #PWR04
+U 1 1 59B66C8E
+P 2350 5900
+F 0 "#PWR04" H 2350 5650 50  0001 C CNN
+F 1 "GND" H 2350 5750 50  0000 C CNN
+F 2 "" H 2350 5900 50  0000 C CNN
+F 3 "" H 2350 5900 50  0000 C CNN
+	1    2350 5900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3600 5300
+NoConn ~ 3600 5200
+NoConn ~ 3600 5100
+NoConn ~ 3600 5000
+NoConn ~ 3600 4700
+NoConn ~ 3600 4600
+NoConn ~ 3600 4400
+NoConn ~ 3600 4300
+NoConn ~ 3600 3900
+NoConn ~ 3600 3800
+NoConn ~ 3600 3650
+NoConn ~ 3600 3550
+NoConn ~ 3600 3450
+NoConn ~ 3600 3350
+NoConn ~ 3600 3250
+NoConn ~ 3600 2800
+NoConn ~ 3600 2700
+NoConn ~ 3600 2550
+NoConn ~ 3600 2450
+NoConn ~ 3600 2350
+NoConn ~ 3600 2250
+NoConn ~ 3600 2050
+NoConn ~ 3600 1850
+Text Notes 7400 7500 0    60   ~ 0
+sableye Board, rev 0.9
+Text Notes 8200 7650 0    60   ~ 0
+September 11th, 2017
+Wire Wire Line
+	3150 1400 3050 1400
+Wire Wire Line
+	3150 1400 3150 1300
+Wire Wire Line
+	4350 1750 4200 1750
+Wire Wire Line
+	4200 1750 4200 1700
+Wire Wire Line
+	3600 3000 4350 3000
+Wire Wire Line
+	3600 2900 4350 2900
+Wire Wire Line
+	4350 2200 4000 2200
+Wire Wire Line
+	4000 2200 4000 2150
+Wire Wire Line
+	4000 2150 3600 2150
+Wire Wire Line
+	3600 1950 4350 1950
+Wire Wire Line
+	2450 1300 2450 1400
+Wire Wire Line
+	3600 4500 4350 4500
+Wire Wire Line
+	2350 5900 2350 5800
+Wire Wire Line
+	2350 5800 2450 5800
+Connection ~ 2450 5800
+Connection ~ 2550 5800
+Connection ~ 2650 5800
+$Comp
+L power:PWR_FLAG #FLG05
+U 1 1 59D95B93
+P 950 1000
+F 0 "#FLG05" H 950 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 950 1150 50  0000 C CNN
+F 2 "" H 950 1000 50  0001 C CNN
+F 3 "" H 950 1000 50  0001 C CNN
+	1    950  1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L sableye-rescue:+3.3V #PWR06
+U 1 1 59D95C61
+P 950 900
+F 0 "#PWR06" H 950 750 50  0001 C CNN
+F 1 "+3.3V" H 950 1040 50  0000 C CNN
+F 2 "" H 950 900 50  0001 C CNN
+F 3 "" H 950 900 50  0001 C CNN
+	1    950  900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  900  950  1000
+Wire Wire Line
+	2450 5800 2550 5800
+Wire Wire Line
+	2550 5800 2650 5800
+Wire Wire Line
+	2650 5800 2750 5800
+$EndSCHEMATC

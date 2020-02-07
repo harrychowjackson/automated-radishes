@@ -37,6 +37,7 @@ _DEFAULT = {
   'resolution': '1080p'
   }
 
+
 ## Local functions.
 def _get_time_now(time_format='utc'):
   """
@@ -44,11 +45,11 @@ def _get_time_now(time_format='utc'):
   :in: time_format (str) ['utc','epoch']
   :out: timestamp (str)
   """
-  if time_format == 'utc' or time_format == 'timestamp':
+  if time_format == 'utc' or time_format == 'label':
     return datetime.datetime.utcnow().strftime("%Y%m%d_%H%M%S")
-  elif time_format == 'epoch':
+  elif time_format == 'epoch' or time_format == 'timestamp':
     td = datetime.datetime.utcnow() - _EPOCH
-    return str(td.total_seconds())
+    return str(td.total_seconds()).replace('.','_')
   else:
     # NOTE: Failure to specify an appropriate time_format will cost
     #         you one layer of recursion! YOU HAVE BEEN WARNED.  ) 0 o .
@@ -66,6 +67,7 @@ def _verify_cv2_port(port_index):
     available = True
   cam.release()
   return available
+
 
 # TODO: Import from Device class.
 class Camera(object):
@@ -178,6 +180,9 @@ class Camera(object):
     ret, frame = cam.read()
     cv2.imwrite(image_label, frame)
     cam.release()
+
+    ## Verify that file exists.
+    # TODO
     
   def clean_up(self):
     """

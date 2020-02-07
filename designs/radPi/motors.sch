@@ -1,38 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:radPi-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:devs
-LIBS:relays
+EESchema Schematic File Version 4
 LIBS:radPi-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -47,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LEMO2-RESCUE-radPi K?
+L radPi-rescue:LEMO2-RESCUE-radPi K?
 U 1 1 59B32C2E
 P 3950 1950
 AR Path="/59B32C2E" Ref="K?"  Part="1" 
@@ -60,7 +28,7 @@ F 3 "" H 3950 1950 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 59B32CBE
 P 3750 2200
 F 0 "#PWR011" H 3750 1950 50  0001 C CNN
@@ -71,7 +39,7 @@ F 3 "" H 3750 2200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +12V #PWR012
+L power:+12V #PWR012
 U 1 1 59B32CE4
 P 4200 2250
 F 0 "#PWR012" H 4200 2100 50  0001 C CNN
@@ -82,7 +50,7 @@ F 3 "" H 4200 2250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G6DN_Relay SW1
+L relays:G6DN_Relay SW1
 U 1 1 59B5F092
 P 3250 3050
 F 0 "SW1" H 3750 2600 60  0000 C CNN
@@ -93,7 +61,7 @@ F 3 "" H 3000 3050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D1
+L radPi-rescue:D D1
 U 1 1 59B5F17D
 P 2200 3050
 F 0 "D1" H 2200 3150 50  0000 C CNN
@@ -106,7 +74,7 @@ $EndComp
 Text HLabel 1100 3300 0    60   UnSpc ~ 0
 PUMP_IN
 $Comp
-L C C3
+L radPi-rescue:C C3
 U 1 1 59B60A7A
 P 4500 3450
 F 0 "C3" H 4525 3550 50  0000 L CNN
@@ -117,7 +85,7 @@ F 3 "" H 4500 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C2
+L radPi-rescue:CP C2
 U 1 1 59B60AE8
 P 4250 2750
 F 0 "C2" H 4275 2850 50  0000 L CNN
@@ -128,7 +96,7 @@ F 3 "" H 4250 2750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P5
+L radPi-rescue:CONN_01X02 P5
 U 1 1 59B60C39
 P 5150 3450
 F 0 "P5" H 5150 3600 50  0000 C CNN
@@ -139,7 +107,7 @@ F 3 "" H 5150 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 59B610C8
 P 2200 3650
 F 0 "#PWR013" H 2200 3400 50  0001 C CNN
@@ -150,7 +118,7 @@ F 3 "" H 2200 3650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D2
+L radPi-rescue:LED D2
 U 1 1 59B616E3
 P 4250 4000
 F 0 "D2" H 4250 4100 50  0000 C CNN
@@ -161,7 +129,7 @@ F 3 "" H 4250 4000 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L radPi-rescue:R R2
 U 1 1 59B618AA
 P 4250 3550
 F 0 "R2" V 4330 3550 50  0000 C CNN
@@ -172,7 +140,7 @@ F 3 "" H 4250 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDD #PWR014
+L power:GNDD #PWR014
 U 1 1 59B62B40
 P 4250 2950
 F 0 "#PWR014" H 4250 2700 50  0001 C CNN
@@ -183,7 +151,7 @@ F 3 "" H 4250 2950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDD #PWR015
+L power:GNDD #PWR015
 U 1 1 59B62B9D
 P 3350 4150
 F 0 "#PWR015" H 3350 3900 50  0001 C CNN
@@ -194,7 +162,7 @@ F 3 "" H 3350 4150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR016
+L power:GND #PWR016
 U 1 1 59B62C20
 P 3050 4150
 F 0 "#PWR016" H 3050 3900 50  0001 C CNN
@@ -205,7 +173,7 @@ F 3 "" H 3050 4150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L L L1
+L radPi-rescue:L L1
 U 1 1 59B62C45
 P 3200 4100
 F 0 "L1" V 3150 4100 50  0000 C CNN
@@ -216,7 +184,7 @@ F 3 "" H 3200 4100 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R1
+L radPi-rescue:R R1
 U 1 1 59B5F2DD
 P 1350 3300
 F 0 "R1" V 1430 3300 50  0000 C CNN
@@ -227,7 +195,7 @@ F 3 "" H 1350 3300 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L BC556 Q1
+L radPi-rescue:BC556 Q1
 U 1 1 59B65C2E
 P 1700 3300
 F 0 "Q1" H 1900 3375 50  0000 L CNN
@@ -238,7 +206,7 @@ F 3 "" H 1700 3300 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D3
+L radPi-rescue:D D3
 U 1 1 59B65D7A
 P 4750 3450
 F 0 "D3" H 4750 3550 50  0000 C CNN
@@ -317,7 +285,7 @@ Connection ~ 4000 2600
 Wire Wire Line
 	4250 2950 4250 2900
 $Comp
-L GNDD #PWR017
+L power:GNDD #PWR017
 U 1 1 59B6663B
 P 4250 4250
 F 0 "#PWR017" H 4250 4000 50  0001 C CNN
@@ -328,7 +296,7 @@ F 3 "" H 4250 4250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C1
+L radPi-rescue:CP C1
 U 1 1 59B71339
 P 2450 3050
 F 0 "C1" H 2475 3150 50  0000 L CNN

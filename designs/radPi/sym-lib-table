@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name radPi-rescue)(type Legacy)(uri ${KIPRJMOD}/radPi-rescue.lib)(options "")(descr ""))
+  (lib (name devs)(type Legacy)(uri /home/nubby/Documents/radishes/automated-radishes/designs/libs/devs.lib)(options "")(descr ""))
+  (lib (name relays)(type Legacy)(uri /home/nubby/Documents/radishes/automated-radishes/designs/libs/relays.lib)(options "")(descr ""))
+)

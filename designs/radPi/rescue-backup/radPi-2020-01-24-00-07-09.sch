@@ -1,6 +1,38 @@
-EESchema Schematic File Version 4
-LIBS:sableye-cache
-EELAYER 26 0
+EESchema Schematic File Version 2
+LIBS:radPi-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:devs
+LIBS:relays
+LIBS:radPi-cache
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +47,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L sableye-rescue:RaspberryPi3_ModB-RESCUE-sableye U1
+L RaspberryPi3_ModB-RESCUE-radPi U1
 U 1 1 59B1EDFB
 P 2800 3600
 F 0 "U1" H 3650 1500 60  0000 C CNN
@@ -41,7 +73,7 @@ F9 "SDA" B L 4350 2900 60
 F10 "SCLK" I L 4350 3000 60 
 $EndSheet
 $Comp
-L power:+5V #PWR01
+L +5V #PWR01
 U 1 1 59B1FB01
 P 3150 1300
 F 0 "#PWR01" H 3150 1150 50  0001 C CNN
@@ -52,7 +84,7 @@ F 3 "" H 3150 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR02
+L +5V #PWR02
 U 1 1 59B1FC65
 P 4200 1700
 F 0 "#PWR02" H 4200 1550 50  0001 C CNN
@@ -63,7 +95,7 @@ F 3 "" H 4200 1700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sableye-rescue:+3.3V #PWR03
+L +3.3V #PWR03
 U 1 1 59B27B65
 P 2450 1300
 F 0 "#PWR03" H 2450 1150 50  0001 C CNN
@@ -85,7 +117,7 @@ F1 "motors.sch" 60
 F2 "PUMP_IN" U L 4350 4500 60 
 $EndSheet
 $Comp
-L power:GND #PWR04
+L GND #PWR04
 U 1 1 59B66C8E
 P 2350 5900
 F 0 "#PWR04" H 2350 5650 50  0001 C CNN
@@ -119,7 +151,7 @@ NoConn ~ 3600 2250
 NoConn ~ 3600 2050
 NoConn ~ 3600 1850
 Text Notes 7400 7500 0    60   ~ 0
-sableye Board, rev 0.9
+radPi Board, rev 0.9
 Text Notes 8200 7650 0    60   ~ 0
 September 11th, 2017
 Wire Wire Line
@@ -149,12 +181,12 @@ Wire Wire Line
 Wire Wire Line
 	2350 5900 2350 5800
 Wire Wire Line
-	2350 5800 2450 5800
+	2350 5800 2750 5800
 Connection ~ 2450 5800
 Connection ~ 2550 5800
 Connection ~ 2650 5800
 $Comp
-L power:PWR_FLAG #FLG05
+L PWR_FLAG #FLG05
 U 1 1 59D95B93
 P 950 1000
 F 0 "#FLG05" H 950 1075 50  0001 C CNN
@@ -165,7 +197,7 @@ F 3 "" H 950 1000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L sableye-rescue:+3.3V #PWR06
+L +3.3V #PWR06
 U 1 1 59D95C61
 P 950 900
 F 0 "#PWR06" H 950 750 50  0001 C CNN
@@ -177,10 +209,4 @@ F 3 "" H 950 900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	950  900  950  1000
-Wire Wire Line
-	2450 5800 2550 5800
-Wire Wire Line
-	2550 5800 2650 5800
-Wire Wire Line
-	2650 5800 2750 5800
 $EndSCHEMATC
